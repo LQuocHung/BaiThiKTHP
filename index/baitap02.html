@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./../css/style.css" />
+    <!-- Bootstrap CSS v5.3.8 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="register-container">
+        <div class="register-form">
+          <h1>Đăng ký tài khoản</h1>
+
+          <p class="subtitle">Tạo tài khoản mới để bắt đầu</p>
+
+          <form id="registerForm">
+            <!-- Họ tên -->
+            <div class="form-group">
+              <label for="name"> Họ và tên </label>
+
+              <input
+                type="text"
+                id="name"
+                placeholder="Nhập họ và tên"
+                required
+              />
+
+              <small id="nameError"></small>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+              <label for="email"> Email </label>
+
+              <input
+                type="email"
+                id="email"
+                placeholder="example@gmail.com"
+                required
+              />
+
+              <small id="emailError"></small>
+            </div>
+
+            <!-- Mật khẩu -->
+            <div class="form-group">
+              <label for="password"> Mật khẩu </label>
+
+              <input
+                type="password"
+                id="password"
+                placeholder="Nhập mật khẩu"
+                required
+              />
+
+              <small id="passwordError"></small>
+            </div>
+
+            <!-- Điều khoản -->
+            <div class="terms">
+              <input type="checkbox" id="terms" />
+
+              <label for="terms"> Tôi đồng ý với điều khoản sử dụng </label>
+            </div>
+
+            <small id="termsError"></small>
+
+            <!-- Button -->
+            <button type="submit">Đăng ký</button>
+          </form>
+
+          <!-- Thông báo -->
+          <div id="successMessage"></div>
+        </div>
+      </div>
+    </header>
+    <main></main>
+    <footer>
+      <!-- place footer here -->
+    </footer>
+    <!-- Bootstrap JavaScript Bundle (includes Popper) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./../js/script.js"></script>
+  </body>
+</html>

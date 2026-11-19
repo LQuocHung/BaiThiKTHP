@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./../css/style.css" />
+    <!-- Bootstrap CSS v5.3.8 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <header>
+      <header class="header">
+        <div class="container">
+          <h1>BÀI TẬP HTML - CSS - JAVASCRIPT</h1>
+
+          <p>Website trình bày 4 câu hỏi lý thuyết và ví dụ thực hành</p>
+        </div>
+      </header>
+    </header>
+    <!-- =========================
+         MENU
+    ========================== -->
+
+    <nav class="navbar">
+      <div class="container nav-container">
+        <a href="#question1"> Câu 1 </a>
+
+        <a href="#question2"> Câu 2 </a>
+
+        <a href="#question3"> Câu 3 </a>
+
+        <a href="#question4"> Câu 4 </a>
+      </div>
+    </nav>
+    <main class="container">
+      <!-- =========================
+                   CÂU 1
+              ========================== -->
+
+      <section id="question1" class="question">
+        <h2>Câu 1: position: absolute và position: relative</h2>
+
+        <h3>1.1. Sự khác biệt</h3>
+
+        <p>
+          Trong CSS, <strong>position: relative</strong> giữ nguyên vị trí ban
+          đầu của phần tử trong luồng tài liệu. Khi sử dụng các thuộc tính top,
+          right, bottom, left, phần tử có thể được dịch chuyển so với vị trí ban
+          đầu.
+        </p>
+
+        <p>
+          Trong khi đó, <strong>position: absolute</strong> đưa phần tử ra khỏi
+          luồng tài liệu thông thường. Phần tử được định vị dựa trên phần tử cha
+          gần nhất có position khác static. Nếu không có phần tử cha phù hợp, nó
+          sẽ được định vị theo viewport.
+        </p>
+
+        <h3>1.2. Ví dụ position: relative</h3>
+
+        <div class="relative-example">
+          <div class="relative-box">Relative</div>
+
+          <p>Phần tử vẫn giữ vị trí trong layout.</p>
+        </div>
+
+        <h3>1.3. Ví dụ position: absolute</h3>
+
+        <div class="absolute-parent">
+          <div class="absolute-box">Absolute</div>
+
+          <p>Phần tử Absolute được định vị dựa trên phần tử cha.</p>
+        </div>
+
+        <h3>1.4. Ứng dụng Responsive</h3>
+
+        <p>
+          <strong>Relative</strong> thường được sử dụng để tạo phần tử cha làm
+          mốc định vị cho các phần tử con.
+        </p>
+
+        <p>
+          <strong>Absolute</strong> phù hợp với các thành phần như icon nằm trên
+          hình ảnh, badge thông báo, nút đóng hoặc menu phụ.
+        </p>
+
+        <p>
+          Khi website responsive, nên hạn chế sử dụng absolute với kích thước cố
+          định vì layout có thể bị lệch trên màn hình nhỏ. Có thể kết hợp CSS
+          Grid, Flexbox, %, rem và media query để đảm bảo tương thích.
+        </p>
+
+        <h3>1.5. Ảnh hưởng khi deploy lên hosting</h3>
+
+        <p>
+          position relative và absolute được xử lý bởi trình duyệt nên không phụ
+          thuộc trực tiếp vào hosting. Tuy nhiên, website phải được thiết kế
+          responsive để hiển thị đúng trên desktop, tablet và smartphone.
+        </p>
+      </section>
+
+      <!-- =========================
+                   CÂU 2
+              ========================== -->
+
+      <section id="question2" class="question">
+        <h2>Câu 2: Domain, Hosting và DNS</h2>
+
+        <h3>2.1. Domain là gì?</h3>
+
+        <p>
+          Domain là tên miền giúp người dùng truy cập website dễ dàng thay vì
+          phải nhớ địa chỉ IP của máy chủ. Ví dụ: example.com.
+        </p>
+
+        <h3>2.2. Hosting là gì?</h3>
+
+        <p>
+          Hosting là nơi lưu trữ các file của website như HTML, CSS, JavaScript,
+          hình ảnh và các tài nguyên khác.
+        </p>
+
+        <h3>2.3. Quy trình đăng ký Domain và Hosting</h3>
+
+        <ol>
+          <li>Chọn một tên domain phù hợp.</li>
+
+          <li>Kiểm tra domain còn khả dụng hay không.</li>
+
+          <li>Đăng ký và thanh toán tên miền.</li>
+
+          <li>Chọn dịch vụ hosting hoặc nền tảng deploy.</li>
+
+          <li>Upload source code HTML, CSS và JavaScript.</li>
+
+          <li>Cấu hình DNS để domain trỏ tới hosting.</li>
+
+          <li>Kiểm tra website bằng domain.</li>
+        </ol>
+
+        <h3>2.4. Vai trò của DNS</h3>
+
+        <p>
+          DNS (Domain Name System) có nhiệm vụ chuyển đổi tên miền thành địa chỉ
+          IP hoặc thông tin định tuyến phù hợp để trình duyệt có thể tìm đến máy
+          chủ chứa website.
+        </p>
+
+        <div class="diagram">
+          <div>Người dùng</div>
+
+          <span>→</span>
+
+          <div>Domain</div>
+
+          <span>→</span>
+
+          <div>DNS</div>
+
+          <span>→</span>
+
+          <div>Hosting</div>
+
+          <span>→</span>
+
+          <div>Website</div>
+        </div>
+
+        <h3>2.5. Công cụ deploy</h3>
+
+        <ul>
+          <li>
+            <strong>GitHub Pages:</strong>
+            phù hợp với website tĩnh sử dụng HTML, CSS và JavaScript.
+          </li>
+
+          <li>
+            <strong>Netlify:</strong>
+            hỗ trợ deploy website tĩnh nhanh chóng, kết nối với GitHub và tự
+            động cập nhật khi source code thay đổi.
+          </li>
+        </ul>
+
+        <h3>2.6. Rủi ro bảo mật</h3>
+
+        <ul>
+          <li>
+            Không sử dụng HTTPS có thể khiến dữ liệu truyền giữa người dùng và
+            website bị nghe lén.
+          </li>
+
+          <li>
+            Cấu hình DNS sai có thể làm website không truy cập được hoặc trỏ đến
+            hệ thống không mong muốn.
+          </li>
+
+          <li>
+            Đưa API key hoặc mật khẩu vào JavaScript phía client có thể làm lộ
+            thông tin.
+          </li>
+
+          <li>
+            Source code có lỗ hổng XSS có thể cho phép mã độc chạy trong trình
+            duyệt người dùng.
+          </li>
+        </ul>
+      </section>
+
+      <!-- =========================
+                   CÂU 3
+              ========================== -->
+
+      <section id="question3" class="question">
+        <h2>Câu 3: So sánh let, const và var</h2>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Đặc điểm</th>
+
+              <th>var</th>
+
+              <th>let</th>
+
+              <th>const</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Scope</td>
+
+              <td>Function scope</td>
+
+              <td>Block scope</td>
+
+              <td>Block scope</td>
+            </tr>
+
+            <tr>
+              <td>Có thể gán lại</td>
+
+              <td>Có</td>
+
+              <td>Có</td>
+
+              <td>Không</td>
+            </tr>
+
+            <tr>
+              <td>Hoisting</td>
+
+              <td>Có, giá trị undefined</td>
+
+              <td>Có nhưng nằm trong TDZ</td>
+
+              <td>Có nhưng nằm trong TDZ</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>3.1. Ví dụ lỗi với var</h3>
+
+        <pre><code>
+      for (var i = 0; i < 3; i++) {
+          console.log(i);
+      }
+      
+      console.log(i);
+      
+      // Kết quả: 3
+                  </code></pre>
+
+        <p>
+          Vì var không có block scope nên biến i vẫn tồn tại bên ngoài vòng lặp.
+        </p>
+
+        <h3>3.2. Ví dụ với let</h3>
+
+        <pre><code>
+      for (let i = 0; i < 3; i++) {
+          console.log(i);
+      }
+      
+      console.log(i);
+      
+      // ReferenceError
+                  </code></pre>
+
+        <p>let có block scope nên i chỉ tồn tại trong vòng lặp.</p>
+
+        <h3>3.3. Ví dụ với const</h3>
+
+        <pre><code>
+      const name = "Hung";
+      
+      name = "An";
+      
+      // TypeError
+                  </code></pre>
+
+        <p>const không cho phép gán lại giá trị cho biến.</p>
+
+        <h3>3.4. Debug bằng Chrome DevTools</h3>
+
+        <p>
+          Có thể mở Chrome DevTools bằng phím
+          <strong>F12</strong> hoặc <strong>Ctrl + Shift + I</strong>.
+        </p>
+
+        <p>
+          Tab <strong>Console</strong> cho phép xem lỗi JavaScript. Tab
+          <strong>Sources</strong> cho phép đặt breakpoint, chạy từng dòng lệnh
+          và kiểm tra giá trị biến.
+        </p>
+
+        <p>
+          Khi xảy ra lỗi, DevTools hiển thị loại lỗi, dòng code gây lỗi và stack
+          trace để hỗ trợ tìm nguyên nhân.
+        </p>
+      </section>
+
+      <!-- =========================
+                   CÂU 4
+              ========================== -->
+
+      <section id="question4" class="question">
+        <h2>Câu 4: Event Delegation trong JavaScript</h2>
+
+        <h3>4.1. Khái niệm</h3>
+
+        <p>
+          Event Delegation là kỹ thuật gắn một event listener cho phần tử cha
+          thay vì gắn riêng listener cho từng phần tử con.
+        </p>
+
+        <p>
+          Kỹ thuật này dựa trên cơ chế
+          <strong>Event Bubbling</strong> của JavaScript. Khi người dùng click
+          vào phần tử con, sự kiện sẽ bubble lên phần tử cha.
+        </p>
+
+        <h3>4.2. Ví dụ Dynamic List</h3>
+
+        <div class="demo">
+          <h3>Danh sách sản phẩm</h3>
+
+          <button id="addProduct">+ Thêm sản phẩm</button>
+
+          <ul id="productList">
+            <li>
+              iPhone 15 Pro Max
+              <button class="delete">Xóa</button>
+            </li>
+
+            <li>
+              Samsung Galaxy S24 Ultra
+              <button class="delete">Xóa</button>
+            </li>
+
+            <li>
+              Xiaomi 14
+              <button class="delete">Xóa</button>
+            </li>
+          </ul>
+        </div>
+
+        <h3>4.3. JavaScript Event Delegation</h3>
+
+        <pre><code>
+      productList.addEventListener("click", function(event) {
+      
+          if (event.target.classList.contains("delete")) {
+      
+              event.target.parentElement.remove();
+      
+          }
+      
+      });
+                  </code></pre>
+
+        <p>
+          Ở đây chỉ cần một event listener cho
+          <strong>productList</strong>, thay vì tạo một event listener riêng cho
+          từng nút Xóa.
+        </p>
+
+        <h3>4.4. Lợi ích</h3>
+
+        <ul>
+          <li>Giảm số lượng event listener.</li>
+
+          <li>Tiết kiệm bộ nhớ.</li>
+
+          <li>Tăng hiệu suất khi danh sách có nhiều phần tử.</li>
+
+          <li>Có thể xử lý các phần tử được tạo động sau khi trang đã tải.</li>
+
+          <li>Code JavaScript ngắn gọn và dễ bảo trì hơn.</li>
+        </ul>
+
+        <h3>4.5. Kết hợp HTML/CSS</h3>
+
+        <p>
+          HTML chịu trách nhiệm xây dựng cấu trúc danh sách, CSS chịu trách
+          nhiệm hiển thị và responsive, còn JavaScript xử lý sự kiện.
+        </p>
+
+        <p>
+          Việc phân chia HTML, CSS và JavaScript thành các nhiệm vụ riêng giúp
+          website dễ bảo trì và tối ưu hiệu suất khi deploy.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <!-- place footer here -->
+      <p>Bài tập Web Design - HTML | CSS | JavaScript</p>
+    </footer>
+    <!-- Bootstrap JavaScript Bundle (includes Popper) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./../js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,874 @@
+/*BaiTap1*/
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Toàn bộ trang */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #222;
+}
+
+/* Header */
+header {
+  background: #111827;
+  color: white;
+  text-align: center;
+  padding: 35px 20px;
+}
+
+header h1 {
+  margin-bottom: 10px;
+}
+
+header p {
+  color: #d1d5db;
+}
+
+/* Ô tìm kiếm */
+.search-box {
+  max-width: 600px;
+  margin: 25px auto 0;
+  display: flex;
+  gap: 10px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+}
+
+.search-box button {
+  padding: 14px 22px;
+  border: none;
+  border-radius: 8px;
+  background-color: #2563eb;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.search-box button:hover {
+  background-color: #1d4ed8;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 35px auto;
+  padding: 0 20px;
+}
+
+/* Thông báo */
+#message {
+  text-align: center;
+  color: #dc2626;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+/* Grid sản phẩm */
+.product-grid {
+  display: grid;
+
+  /* Responsive */
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+/* Card sản phẩm */
+.product {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  transition: 0.3s;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Hình sản phẩm */
+.product img {
+  width: 100%;
+  height: 220px;
+
+  object-fit: contain;
+
+  margin-bottom: 15px;
+}
+
+/* Tên sản phẩm */
+.product h3 {
+  font-size: 19px;
+  margin-bottom: 10px;
+}
+
+/* Giá */
+.price {
+  color: #dc2626;
+  font-size: 20px;
+  font-weight: bold;
+
+  margin: 10px 0 15px;
+}
+
+/* Nút */
+.product button {
+  width: 100%;
+
+  padding: 11px;
+
+  border: none;
+  border-radius: 6px;
+
+  background-color: #111827;
+  color: white;
+
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.product button:hover {
+  background-color: #374151;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Điện thoại */
+@media (max-width: 600px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .search-box {
+    flex-direction: column;
+  }
+
+  .search-box button {
+    width: 100%;
+  }
+}
+
+/*BaiTap2*/
+
+/* =========================
+   BODY
+========================= */
+
+body {
+  font-family: Arial, sans-serif;
+
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+
+  min-height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  padding: 20px;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.register-container {
+  width: 100%;
+  max-width: 450px;
+}
+
+/* =========================
+   FORM
+========================= */
+
+.register-form {
+  background-color: white;
+
+  padding: 35px;
+
+  border-radius: 12px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================
+   TITLE
+========================= */
+
+h1 {
+  text-align: center;
+
+  margin-bottom: 10px;
+
+  color: #111827;
+}
+
+.subtitle {
+  text-align: center;
+
+  color: #6b7280;
+
+  margin-bottom: 30px;
+}
+
+/* =========================
+   FORM GROUP
+========================= */
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-weight: bold;
+
+  color: #374151;
+}
+
+/* =========================
+   INPUT
+========================= */
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+
+  padding: 13px;
+
+  border: 1px solid #d1d5db;
+
+  border-radius: 7px;
+
+  font-size: 15px;
+
+  outline: none;
+
+  transition: 0.2s;
+}
+
+input:focus {
+  border-color: #2563eb;
+
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* =========================
+   ERROR
+========================= */
+
+small {
+  display: block;
+
+  margin-top: 5px;
+
+  color: #dc2626;
+
+  font-size: 13px;
+}
+
+/* =========================
+   TERMS
+========================= */
+
+.terms {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin-bottom: 5px;
+}
+
+.terms label {
+  margin: 0;
+
+  font-weight: normal;
+
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+
+  cursor: pointer;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+button {
+  width: 100%;
+
+  padding: 14px;
+
+  margin-top: 20px;
+
+  border: none;
+
+  border-radius: 7px;
+
+  background-color: #2563eb;
+
+  color: white;
+
+  font-size: 16px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+button:hover {
+  background-color: #1d4ed8;
+}
+
+/* =========================
+   SUCCESS MESSAGE
+========================= */
+
+#successMessage {
+  margin-top: 20px;
+
+  padding: 12px;
+
+  border-radius: 7px;
+
+  text-align: center;
+
+  color: #166534;
+
+  background-color: #dcfce7;
+
+  display: none;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 500px) {
+  body {
+    padding: 15px;
+  }
+
+  .register-form {
+    padding: 25px 20px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    padding: 12px;
+  }
+
+  button {
+    padding: 13px;
+  }
+}
+
+/*BaiTap3*/
+/* =========================
+   RESET
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+ BODY
+========================= */
+
+body {
+  font-family: Arial, sans-serif;
+
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(135deg, #1e3a8a, #7c3aed);
+
+  padding: 20px;
+}
+
+/* =========================
+ CONTAINER
+========================= */
+
+.container {
+  width: 100%;
+  max-width: 600px;
+}
+
+/* =========================
+ TIMER BOX
+========================= */
+
+.timer-box {
+  background: white;
+
+  padding: 45px 30px;
+
+  border-radius: 20px;
+
+  text-align: center;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.timer-box h1 {
+  color: #111827;
+
+  margin-bottom: 10px;
+}
+
+.timer-box p {
+  color: #6b7280;
+
+  font-size: 18px;
+
+  margin-bottom: 20px;
+}
+
+/* =========================
+ TIMER
+========================= */
+
+.timer {
+  font-size: 90px;
+
+  font-weight: bold;
+
+  letter-spacing: 5px;
+
+  color: #2563eb;
+
+  margin: 20px 0 30px;
+}
+
+/* =========================
+ BUTTONS
+========================= */
+
+.buttons {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  flex-wrap: wrap;
+}
+
+button {
+  border: none;
+
+  padding: 12px 20px;
+
+  border-radius: 8px;
+
+  background-color: #2563eb;
+
+  color: white;
+
+  font-size: 15px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+button:hover {
+  background-color: #1d4ed8;
+
+  transform: translateY(-2px);
+}
+
+/* =========================
+ WARNING ANIMATION
+ Dưới 1 phút
+========================= */
+
+.timer.warning {
+  color: #dc2626;
+
+  animation: warningAnimation 1s infinite;
+}
+
+/* Animation nhấp nháy */
+@keyframes warningAnimation {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.08);
+    opacity: 0.6;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* =========================
+ MODAL
+========================= */
+
+.modal {
+  display: none;
+
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.6);
+
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+}
+
+/* =========================
+ MODAL CONTENT
+========================= */
+
+.modal-content {
+  width: 100%;
+  max-width: 400px;
+
+  background-color: white;
+
+  padding: 35px;
+
+  border-radius: 15px;
+
+  text-align: center;
+
+  animation: modalAnimation 0.3s ease;
+}
+
+.modal-content h2 {
+  color: #dc2626;
+
+  margin-bottom: 15px;
+}
+
+.modal-content p {
+  color: #4b5563;
+
+  margin-bottom: 25px;
+}
+
+/* Modal animation */
+@keyframes modalAnimation {
+  from {
+    opacity: 0;
+
+    transform: scale(0.7);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: scale(1);
+  }
+}
+
+/* =========================
+ RESPONSIVE
+========================= */
+
+@media (max-width: 600px) {
+  .timer-box {
+    padding: 35px 20px;
+  }
+
+  .timer-box h1 {
+    font-size: 25px;
+  }
+
+  .timer {
+    font-size: 65px;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .buttons button {
+    width: 100%;
+  }
+}
+
+/*BaiTapTuLuan*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --primary: #2457c5;
+  --dark: #17233b;
+  --muted: #64748b;
+  --bg: #f3f6fc;
+}
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.7;
+  color: #263247;
+  background: var(--bg);
+}
+header {
+  color: white;
+  text-align: center;
+  padding: 42px 20px;
+  background: linear-gradient(130deg, #183b87, #3978e8);
+}
+header h1 {
+  font-size: clamp(25px, 4vw, 36px);
+  margin-bottom: 8px;
+}
+header p {
+  opacity: 0.92;
+}
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  background: white;
+  box-shadow: 0 3px 12px #14264a18;
+}
+nav a {
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: bold;
+  padding: 8px 13px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+nav a:hover {
+  color: white;
+  background: var(--primary);
+}
+main {
+  width: min(1000px, 92%);
+  margin: 28px auto 55px;
+}
+.intro,
+section {
+  background: white;
+  border-radius: 14px;
+  padding: 25px;
+  margin-bottom: 22px;
+  box-shadow: 0 5px 22px #1d355710;
+}
+h2 {
+  color: var(--dark);
+  margin-bottom: 14px;
+  font-size: 23px;
+}
+h3 {
+  color: #244c9c;
+  margin: 18px 0 8px;
+  font-size: 18px;
+}
+p {
+  margin: 8px 0;
+}
+ul,
+ol {
+  padding-left: 24px;
+  margin: 8px 0;
+}
+li {
+  margin: 5px 0;
+}
+.tag {
+  display: inline-block;
+  background: #eaf0ff;
+  color: #2457c5;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.note {
+  background: #f0f6ff;
+  border-left: 4px solid #3978e8;
+  padding: 12px 15px;
+  border-radius: 5px;
+  margin: 12px 0;
+}
+pre {
+  background: #111827;
+  color: #e5e7eb;
+  padding: 17px;
+  border-radius: 9px;
+  overflow-x: auto;
+  margin: 10px 0 15px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+code {
+  font-family: Consolas, monospace;
+}
+.copy {
+  border: 0;
+  background: var(--primary);
+  color: white;
+  padding: 8px 13px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 0 0 12px;
+}
+.copy:hover {
+  background: #173f9b;
+}
+.demo-box {
+  position: relative;
+  border: 2px dashed #9bb5e8;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 12px 0;
+  min-height: 110px;
+  background: #f8fbff;
+}
+.relative-demo {
+  position: relative;
+  left: 15px;
+  top: 5px;
+  display: inline-block;
+  padding: 8px 12px;
+  color: white;
+  background: #3978e8;
+  border-radius: 5px;
+}
+.absolute-demo {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  background: #e18a32;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 5px;
+}
+.event-list {
+  list-style: none;
+  padding: 0;
+}
+.event-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f1f5ff;
+  padding: 9px 12px;
+  border-radius: 6px;
+  margin: 7px 0;
+}
+.event-list button {
+  border: 0;
+  color: white;
+  background: #d44c4c;
+  padding: 5px 9px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#newItem {
+  padding: 9px;
+  width: min(65%, 320px);
+  border: 1px solid #b9c6dc;
+  border-radius: 6px;
+}
+#addItem {
+  padding: 9px 13px;
+  border: 0;
+  border-radius: 6px;
+  color: white;
+  background: var(--primary);
+  cursor: pointer;
+}
+footer {
+  text-align: center;
+  padding: 22px;
+  color: var(--muted);
+  font-size: 14px;
+}
+@media (max-width: 600px) {
+  header {
+    padding: 30px 15px;
+  }
+  nav {
+    gap: 2px;
+  }
+  nav a {
+    font-size: 12px;
+    padding: 7px 9px;
+  }
+  .intro,
+  section {
+    padding: 18px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./../css/style.css" />
+    <!-- Bootstrap CSS v5.3.8 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <header>
+      <!-- place navbar here -->
+
+      <h1>BÀI TẬP HTML, CSS VÀ JAVASCRIPT</h1>
+      <p>
+        Tìm hiểu CSS Position, Domain & Hosting, biến JavaScript và Event
+        Delegation
+      </p>
+
+      <nav>
+        <a href="#cau1">Câu 1: CSS Position</a>
+        <a href="#cau2">Câu 2: Deploy</a>
+        <a href="#cau3">Câu 3: let/const/var</a>
+        <a href="#cau4">Câu 4: Event</a>
+      </nav>
+    </header>
+    <main>
+      <div class="intro">
+        <h2>Giới thiệu</h2>
+        <p>
+          Website này trình bày bốn nội dung cơ bản trong thiết kế và phát triển
+          website. Trang được xây dựng bằng HTML để tạo cấu trúc, CSS để định
+          dạng giao diện và JavaScript để xử lý tương tác.
+        </p>
+      </div>
+
+      <section id="cau1">
+        <span class="tag">CÂU 1 · 10 ĐIỂM</span>
+        <h2>Phân biệt position: relative và position: absolute</h2>
+        <h3>1. Position: relative</h3>
+        <p>
+          Phần tử được định vị tương đối so với vị trí ban đầu của chính nó. Khi
+          sử dụng top, right, bottom hoặc left, phần tử có thể dịch chuyển nhưng
+          vẫn giữ chỗ trong luồng bố cục ban đầu.
+        </p>
+        <h3>2. Position: absolute</h3>
+        <p>
+          Phần tử được định vị theo phần tử tổ tiên gần nhất có thuộc tính
+          position khác static. Phần tử absolute được đưa ra khỏi luồng bố cục
+          thông thường nên không giữ chỗ ban đầu.
+        </p>
+        <h3>Ví dụ trực quan</h3>
+        <div class="demo-box">
+          Khung cha có position: relative.
+          <div class="relative-demo">Phần tử relative</div>
+          <div class="absolute-demo">absolute</div>
+        </div>
+        <h3>Ví dụ code</h3>
+        <pre><code>.container {
+    position: relative;
+    min-height: 150px;
+  }
+  
+  .label {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .image {
+    position: relative;
+    left: 10px;
+  }</code></pre>
+        <h3>Ứng dụng responsive và deploy</h3>
+        <ul>
+          <li>
+            <b>Relative:</b> phù hợp để tạo khung cha làm mốc định vị, hoặc dịch
+            chuyển nhẹ một thành phần mà không làm thay đổi vị trí các thành
+            phần khác.
+          </li>
+          <li>
+            <b>Absolute:</b> phù hợp đặt nhãn trên ảnh, biểu tượng thông báo
+            hoặc nút đóng ở góc hộp nội dung.
+          </li>
+          <li>
+            Khi thiết kế responsive, nên kết hợp Flexbox, Grid, đơn vị %, rem và
+            media query; tránh cố định quá nhiều tọa độ bằng pixel.
+          </li>
+          <li>
+            Hai thuộc tính này không phụ thuộc nhà cung cấp hosting. Tuy nhiên,
+            giao diện bố trí không phù hợp có thể bị tràn hoặc chồng lấn trên
+            điện thoại, máy tính bảng và máy tính.
+          </li>
+        </ul>
+        <div class="note">
+          <b>Kết luận:</b> Relative giữ vị trí trong luồng tài liệu và dịch
+          chuyển từ vị trí gốc; absolute định vị theo phần tử cha phù hợp và
+          không giữ chỗ trong luồng.
+        </div>
+      </section>
+
+      <section id="cau2">
+        <span class="tag">CÂU 2 · 10 ĐIỂM</span>
+        <h2>Đăng ký domain và cấu hình hosting</h2>
+        <h3>1. Domain, hosting và DNS</h3>
+        <p>
+          <b>Domain</b> là tên miền của website, ví dụ: shopgiay.com.
+          <b>Hosting</b> là nơi lưu trữ các tệp website như HTML, CSS,
+          JavaScript và hình ảnh. <b>DNS</b> (Domain Name System) có nhiệm vụ
+          phân giải tên miền thành địa chỉ IP hoặc định tuyến đến dịch vụ
+          hosting tương ứng.
+        </p>
+        <h3>2. Quy trình thực hiện</h3>
+        <ol>
+          <li>Chọn tên miền phù hợp và kiểm tra tên miền còn khả dụng.</li>
+          <li>Đăng ký tên miền tại nhà đăng ký được công nhận.</li>
+          <li>
+            Chuẩn bị website gồm các tệp HTML, CSS, JavaScript và tài nguyên
+            liên quan.
+          </li>
+          <li>
+            Đưa mã nguồn lên dịch vụ hosting tĩnh như GitHub Pages hoặc Netlify.
+          </li>
+          <li>
+            Cấu hình DNS theo hướng dẫn của nền tảng hosting, thường là bản ghi
+            A, AAAA, CNAME hoặc bản ghi được nhà cung cấp yêu cầu.
+          </li>
+          <li>
+            Bật HTTPS, kiểm tra website trên nhiều trình duyệt và thiết bị.
+          </li>
+        </ol>
+        <h3>3. Công cụ deploy không cần server riêng</h3>
+        <ul>
+          <li>
+            <b>GitHub Pages:</b> lưu trữ website tĩnh trực tiếp từ repository
+            GitHub, phù hợp với dự án HTML, CSS và JavaScript cơ bản.
+          </li>
+          <li>
+            <b>Netlify:</b> hỗ trợ deploy từ Git repository hoặc tải thư mục
+            website lên; có thể tự động cập nhật khi mã nguồn thay đổi.
+          </li>
+        </ul>
+        <h3>4. Rủi ro bảo mật</h3>
+        <ul>
+          <li>
+            Không bật HTTPS có thể khiến dữ liệu truyền tải dễ bị nghe lén hoặc
+            can thiệp.
+          </li>
+          <li>
+            Đưa API key, mật khẩu hoặc thông tin bí mật vào JavaScript phía
+            trình duyệt khiến người khác có thể xem được.
+          </li>
+          <li>
+            Cấu hình DNS sai có thể khiến website không truy cập được hoặc trỏ
+            đến máy chủ không mong muốn.
+          </li>
+          <li>
+            Phân quyền repository và tài khoản hosting không an toàn có thể dẫn
+            đến việc mã nguồn bị sửa đổi trái phép.
+          </li>
+        </ul>
+        <div class="note">
+          <b>Kết luận:</b> Domain giúp người dùng truy cập website dễ dàng, DNS
+          kết nối tên miền với hosting, còn hosting lưu trữ và phân phối nội
+          dung website.
+        </div>
+      </section>
+
+      <section id="cau3">
+        <span class="tag">CÂU 3 · 10 ĐIỂM</span>
+        <h2>So sánh let, const và var trong JavaScript</h2>
+        <h3>1. So sánh</h3>
+        <ul>
+          <li>
+            <b>var:</b> có phạm vi function hoặc global, cho phép khai báo lại
+            và có cơ chế hoisting với giá trị ban đầu là undefined.
+          </li>
+          <li>
+            <b>let:</b> có phạm vi block, không cho khai báo lại cùng tên trong
+            cùng scope; được hoisting nhưng không thể truy cập trước dòng khai
+            báo do Temporal Dead Zone.
+          </li>
+          <li>
+            <b>const:</b> có phạm vi block, phải được gán giá trị khi khai báo
+            và không thể gán lại biến. Với object hoặc array, nội dung bên trong
+            vẫn có thể thay đổi.
+          </li>
+        </ul>
+        <h3>2. Ví dụ lỗi thường gặp</h3>
+        <pre><code>console.log(message); // ReferenceError
+  let message = "Xin chào";
+  
+  // Ví dụ khác:
+  const age = 20;
+  // age = 21; // TypeError: không thể gán lại const</code></pre>
+        <p>
+          Ở ví dụ đầu, biến message được truy cập trước khi khai báo let nên
+          phát sinh ReferenceError. Ở ví dụ thứ hai, age được khai báo bằng
+          const nên không thể gán lại giá trị.
+        </p>
+        <h3>3. Cách debug bằng Chrome DevTools</h3>
+        <ol>
+          <li>Mở website trên Chrome và nhấn F12 hoặc Ctrl + Shift + I.</li>
+          <li>
+            Chọn tab <b>Console</b> để xem thông báo lỗi và dòng code gây lỗi.
+          </li>
+          <li>Chọn tab <b>Sources</b>, mở tệp JavaScript cần kiểm tra.</li>
+          <li>
+            Nhấp vào số dòng để đặt breakpoint, sau đó tải lại trang hoặc thực
+            hiện thao tác gây lỗi.
+          </li>
+          <li>
+            Dùng Step over, Step into và bảng Scope để theo dõi giá trị biến
+            trong từng bước.
+          </li>
+        </ol>
+        <div class="note">
+          <b>Khuyến nghị:</b> Ưu tiên dùng const khi không cần gán lại biến và
+          dùng let khi giá trị cần thay đổi. Hạn chế dùng var trong mã
+          JavaScript hiện đại.
+        </div>
+      </section>
+
+      <section id="cau4">
+        <span class="tag">CÂU 4 · 10 ĐIỂM</span>
+        <h2>Event Delegation trong JavaScript</h2>
+        <p>
+          Event Delegation (ủy quyền sự kiện) là kỹ thuật gắn một trình xử lý sự
+          kiện vào phần tử cha thay vì gắn riêng lẻ cho từng phần tử con. Khi
+          người dùng thao tác với phần tử con, sự kiện thường lan truyền lên
+          phần tử cha thông qua cơ chế bubbling. Phần tử cha kiểm tra
+          event.target để xác định phần tử phát sinh sự kiện.
+        </p>
+        <h3>Ví dụ danh sách động</h3>
+        <p>
+          Thử thêm mục mới hoặc nhấn nút Xóa. Chỉ có một trình xử lý click được
+          gắn vào danh sách, vì vậy các mục được thêm sau vẫn hoạt động.
+        </p>
+        <div class="demo-box" style="min-height: 0">
+          <input id="newItem" type="text" placeholder="Nhập tên công việc..." />
+          <button id="addItem" type="button">Thêm mục</button>
+          <ul class="event-list" id="taskList">
+            <li>
+              <span>Học HTML</span
+              ><button type="button" data-action="delete">Xóa</button>
+            </li>
+            <li>
+              <span>Thực hành CSS</span
+              ><button type="button" data-action="delete">Xóa</button>
+            </li>
+          </ul>
+        </div>
+        <h3>Code JavaScript minh họa</h3>
+        <pre><code>const taskList = document.getElementById("taskList");
+  
+  // Chỉ đăng ký một sự kiện click trên phần tử cha
+  taskList.addEventListener("click", function(event) {
+    if (event.target.matches('[data-action="delete"]')) {
+      event.target.closest("li").remove();
+    }
+  });</code></pre>
+        <h3>Lợi ích khi kết hợp HTML, CSS và JavaScript</h3>
+        <ul>
+          <li>
+            Giảm số lượng event listener cần đăng ký, đặc biệt với danh sách có
+            nhiều phần tử.
+          </li>
+          <li>
+            Các phần tử được thêm vào sau vẫn có thể sử dụng sự kiện mà không
+            cần đăng ký listener mới.
+          </li>
+          <li>
+            HTML đảm nhiệm cấu trúc danh sách, CSS đảm nhiệm giao diện,
+            JavaScript xử lý tương tác.
+          </li>
+          <li>
+            Mã nguồn gọn hơn, dễ bảo trì và phù hợp với giao diện có nội dung
+            thay đổi liên tục.
+          </li>
+        </ul>
+        <div class="note">
+          <b>Kết luận:</b> Event Delegation tận dụng cơ chế bubbling để xử lý sự
+          kiện tập trung ở phần tử cha, giúp quản lý danh sách động hiệu quả
+          hơn.
+        </div>
+      </section>
+    </main>
+    <footer>
+      Website bài tập môn Thiết kế Web · Xây dựng bằng HTML, CSS và JavaScript
+    </footer>
+    <!-- Bootstrap JavaScript Bundle (includes Popper) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./../js/script.js"></script>
+  </body>
+</html>
